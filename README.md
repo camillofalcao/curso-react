@@ -2,7 +2,7 @@
 
 Este é o repositório para o meu curso de Introdução ao React.
 
-A playlist contendo as vídeo-aulas será disponibilizada em meu canal no Youtube, que você pode acessar clicando [aqui](https://www.youtube.com/@camillofalcao).
+A playlist contendo as vídeo-aulas será disponibilizada em meu canal no Youtube. Clique [aqui](https://www.youtube.com/playlist?list=PLsd4ZvNuqn0YQMnEJ_6820eRGw3R8rsny) para acessar a playlist.
 
 > [!NOTE]
 > O código apresentado em cada aula se encontra na pasta "**aulaXX**", onde "**XX**" representa o número da aula.
