@@ -1,13 +1,15 @@
 import React from 'react';
-import Loja from './Loja';
 
-const LojaSkin = () => {
+const LojaSkin = (props) => {
     return (
         <div className="card">
-            <img src="./assets/imgs/a.png" alt="Personagem A" />
+            <img src={`./assets/imgs/${props.imagem}`} />
             <div className="container">
-                <p>Ariana Emberlyn</p>
-                <button className="botao-comprar">2000<img src="./assets/imgs/diamante.gif" /></button>
+                <p>{props.nome}</p>
+                <button className="botao-comprar">
+                    {props.gemas}
+                    <img src="./assets/imgs/diamante.gif" />
+                </button>
             </div>
         </div>
     );

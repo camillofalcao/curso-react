@@ -8,14 +8,16 @@ const Loja = () => {
         <Cabecalho />
         <main>
             <div className="loja">
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
-                <LojaSkin />
+                <LojaSkin
+                    nome="Ariana Emberlym"
+                    imagem="a.png"
+                    gemas="2000"
+                />
+                <LojaSkin
+                    nome="Jasper Moonshadow"
+                    imagem="d.png"
+                    gemas="2000"
+                />
             </div>
         </main>
         <Rodape />
