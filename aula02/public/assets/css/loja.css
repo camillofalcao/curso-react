@@ -1,6 +1,7 @@
 @import "./padrao.css";
 @import "./cabecalho.css";
 @import "./rodape.css";
+@import "./loader.css";
 
 .card>img {
     border-radius: 5px;
