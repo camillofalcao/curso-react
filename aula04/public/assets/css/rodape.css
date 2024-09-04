@@ -1,0 +1,55 @@
+@import "./padrao.css";
+
+footer {
+    background-color: var(--destaque);
+    color: var(--destaque-compl);
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-top: solid 2px var(--destaque-compl);
+}
+
+footer .menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+footer .menu li {
+    display: inline;
+    padding: 10px;
+    border: solid 3px;
+    border-radius: 25px;
+    border-color: var(--destaque-compl);
+    margin-right: 50px;
+    justify-content: center;
+    display: flex;
+}
+
+footer .menu li a {
+    font-size: large;
+    color: var(--destaque-compl);
+    text-decoration: none;
+}
+
+footer .menu .menu-item-selecionado {
+    background-color: var(--destaque-compl);
+}
+
+footer .menu .menu-item-selecionado a {
+    color: var(--destaque);
+}
+
+footer .menu li:hover {
+    border-color: var(--fundo);
+    background-color: var(--fundo-compl);
+}
+
+
+footer .menu .menu-item-selecionado:hover {
+    background-color: var(--destaque-compl);
+}

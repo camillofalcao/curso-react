@@ -1,0 +1,57 @@
+:root {
+    --destaque-azul: rgb(44, 88, 197);
+    --destaque-verde: rgb(10, 143, 81);
+    --destaque-vermelho: rgb(197, 44, 44);
+    --destaque-roxo: rgb(156, 41, 198);
+    --destaque-preto: rgb(0, 0, 0);
+}
+
+:root body.azul {
+    --destaque: var(--destaque-azul);
+    --destaque-compl: rgb(206, 219, 253);
+    --fundo: rgba(44, 88, 197, 0.5);
+    --fundo-compl: rgba(11, 36, 98, 0.5);
+    --comprar: rgb(90, 207, 141);
+    --comprar-compl: rgb(0, 0, 0);
+    --comprar-destaque: rgb(0, 255, 110);
+}
+
+:root body.verde {
+    --destaque: var(--destaque-verde);
+    --destaque-compl: rgb(170, 234, 194);
+    --fundo: rgba(115, 224, 150, 0.5);
+    --fundo-compl: rgba(4, 48, 24, 0.5);
+    --comprar: rgb(90, 207, 141);
+    --comprar-compl: rgb(0, 0, 0);
+    --comprar-destaque: rgb(0, 255, 110);
+}
+
+:root body.vermelho {
+    --destaque: var(--destaque-vermelho);
+    --destaque-compl: rgb(253, 206, 206);
+    --fundo: rgba(197, 44, 44, 0.5);
+    --fundo-compl: rgba(98, 11, 11, 0.5);
+    --comprar: rgb(90, 207, 141);
+    --comprar-compl: rgb(0, 0, 0);
+    --comprar-destaque: rgb(0, 255, 110);
+}
+
+:root body.roxo {
+    --destaque: var(--destaque-roxo);
+    --destaque-compl: rgb(221, 186, 234);
+    --fundo: rgb(202, 151, 220);
+    --fundo-compl: rgb(108, 47, 130);
+    --comprar: rgb(90, 207, 141);
+    --comprar-compl: rgb(80, 19, 71);
+    --comprar-destaque: rgb(0, 255, 110);
+}
+
+:root body.preto {
+    --destaque: var(--destaque-preto);
+    --destaque-compl: rgb(207, 213, 231);
+    --fundo: rgba(36, 52, 92, 0.5);
+    --fundo-compl: rgba(211, 215, 225, 0.5);
+    --comprar: rgb(90, 207, 141);
+    --comprar-compl: rgb(0, 0, 0);
+    --comprar-destaque: rgb(0, 255, 110);
+}

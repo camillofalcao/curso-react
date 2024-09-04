@@ -1,0 +1,96 @@
+@import "./padrao.css";
+
+header {
+    background-color: var(--destaque);
+    color: var(--destaque-texto);
+    height: 70px;
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    align-items: center;
+    border-bottom: solid 2px var(--destaque-compl);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+header .carteira {
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    justify-self: right;
+    justify-content: right;
+    margin-right: 30px;
+    width: 100px;
+}
+
+header>.carteira img {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
+
+header>.carteira p {
+    font-size: 1.5em;
+    color: var(--destaque-compl);
+}
+
+header .voltar {
+    height: 25px;
+    width: 40px;
+    align-self: center;
+    position: relative;
+    left: 20px;
+    color: white;
+    background-color: red;
+}
+
+header>h1 {
+    font-weight: bolder;
+    align-self: center;
+    justify-self: center;
+    color: var(--destaque-compl);
+}
+
+header .tema-area {
+    display: flex;
+    border: 1px solid black;
+    background: gainsboro;
+    border-radius: 2rem;
+    width: 170px;
+    height: 32px;
+    padding: 3px;
+    position: absolute;
+    top: 19px;
+    right: 120px;
+}
+
+
+header .tema {
+    position: relative;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    margin: 2px;
+}
+
+header .tema-azul {
+    background: var(--destaque-azul);
+}
+
+header .tema-vermelho {
+    background: var(--destaque-vermelho);
+}
+
+header .tema-verde {
+    background: var(--destaque-verde);
+}
+
+header .tema-roxo {
+    background: var(--destaque-roxo);
+}
+
+header .tema-preto {
+    background: var(--destaque-preto);
+}
