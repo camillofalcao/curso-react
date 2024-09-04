@@ -8,12 +8,10 @@ const Loja = () => {
     const [estado, setEstado] = useState({ carregando: true, dados: [] });
 
     useEffect(() => {
-        if (estado.carregando) {
-            setTimeout(() => {
-                setEstado({ carregando: false, dados: objetos });
-            }, 2000);
-        }
-    }, [estado.carregando]);
+        setTimeout(() => {
+            setEstado({ carregando: false, dados: objetos });
+        }, 2000);
+    }, []);
 
     let componentes;
 
