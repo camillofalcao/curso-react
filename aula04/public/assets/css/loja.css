@@ -85,11 +85,23 @@ body {
 }
 
 #pesquisa>input {
-    border: solid white 2px;
-    background-color: var(--destaque);
-    color: var(--destaque-compl);
-    border-radius: 5px;
+    background-color: var(--destaque-compl);
+    color: var(--destaque);
     width: 325px;
+    background-image: url(../imgs/lupa.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border: solid white 2px;
+    border-radius: 5px;
+    display: flex;
+    width: 342px;
+}
+
+#pesquisa>input:active {
+    border: transparent;
 }
 
 #pesquisa>button {
@@ -98,3 +110,7 @@ body {
     background-color: var(--destaque-compl);
     color: var(--destaque);
 }
+
+/* <div id="pesquisa">
+                <input type="text" onKeyDown={e => console.log(e.code)} />
+            </div> */

@@ -20,7 +20,7 @@ const Loja = () => {
     } else {
         componentes = estado.dados.map(x => {
             return (
-                <LojaSkin
+                <LojaSkin key={x.id}
                     nome={x.nome}
                     imagem={x.imagem}
                     gemas={x.gemas}
@@ -32,10 +32,6 @@ const Loja = () => {
     return (<>
         <Cabecalho />
         <main>
-            <div id="pesquisa">
-                <input type="text" />
-                <button>?</button>
-            </div>
             <div className="loja">
                 {
                     componentes
@@ -47,15 +43,15 @@ const Loja = () => {
 };
 
 const objetos = [
-    { nome: 'Ariana Emberlym', imagem: 'a.png', gemas: 2000 },
-    { nome: 'Elowen Starcrest', imagem: 'b.png', gemas: 2000 },
-    { nome: 'Elias Nightshade', imagem: 'c.png', gemas: 2000 },
-    { nome: 'Jasper Moonshadow', imagem: 'd.png', gemas: 2000 },
-    { nome: 'Ronan Thornfield', imagem: 'e.png', gemas: 2000 },
-    { nome: 'Lila Blackwood', imagem: 'f.png', gemas: 2000 },
-    { nome: 'Mira Sunvale', imagem: 'g.png', gemas: 2000 },
-    { nome: 'Finnian Stormrider', imagem: 'h.png', gemas: 2000 },
-    { nome: 'Liam Ravenscroftn', imagem: 'i.png', gemas: 2000 }
+    { id: 1, nome: 'Ariana Emberlym', imagem: 'a.png', gemas: 2000 },
+    { id: 2, nome: 'Elowen Starcrest', imagem: 'b.png', gemas: 2000 },
+    { id: 3, nome: 'Elias Nightshade', imagem: 'c.png', gemas: 2000 },
+    { id: 4, nome: 'Jasper Moonshadow', imagem: 'd.png', gemas: 2000 },
+    { id: 5, nome: 'Ronan Thornfield', imagem: 'e.png', gemas: 2000 },
+    { id: 6, nome: 'Lila Blackwood', imagem: 'f.png', gemas: 2000 },
+    { id: 7, nome: 'Mira Sunvale', imagem: 'g.png', gemas: 2000 },
+    { id: 8, nome: 'Finnian Stormrider', imagem: 'h.png', gemas: 2000 },
+    { id: 9, nome: 'Liam Ravenscroftn', imagem: 'i.png', gemas: 2000 }
 ];
 
 export default Loja;
