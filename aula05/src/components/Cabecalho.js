@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CarteiraContext } from './Loja';
 
 const Cabecalho = () => {
+    const carteira = useContext(CarteiraContext);
+
     return (
         <header>
             <button className="voltar">&lt;</button>
             <h1>Loja</h1>
             <div className="carteira">
                 <img src="./assets/imgs/diamante.gif" />
-                <p>5000</p>
+                <p>{carteira.saldo}</p>
             </div>
             <div className="tema-area">
                 <button id="trocar-tema-azul" className="tema tema-azul"></button>
