@@ -1,12 +1,23 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const AlunoConsultar = () => {
-    const [objeto, setObjeto] = useState(
-        { id: "2", matricula: 125, nome: 'Bruno' }
-    );
+    const [objeto, setObjeto] = useState(null);
+    const navigate = useNavigate();
 
     const { id } = useParams();
+
+    useEffect(() => {
+        axios.get(`http://localhost:3005/alunos/${id}`).then(resp => {
+            setObjeto(resp.data);
+        })
+    }, []);
+
+    const voltar = e => {
+        e.preventDefault();
+        navigate('/alunos');
+    };
 
     if (objeto == null) {
         return <div>Carregando...</div>;
@@ -22,7 +33,7 @@ const AlunoConsultar = () => {
                 <label className="form-label">Nome</label>
                 <input className="form-control" disabled={true} value={objeto.nome} type="text" />
             </div>
-            <button className="btn btn-secondary mt-2">Voltar</button>
+            <button className="btn btn-secondary mt-2" onClick={e => voltar(e)}>Voltar</button>
         </form>
     );
 }

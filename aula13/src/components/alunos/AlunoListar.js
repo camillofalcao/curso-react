@@ -1,11 +1,30 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const AlunoListar = () => {
-    const [objetos, setObjetos] = useState([
-        { id: "1", matricula: 123, nome: 'Ana' },
-        { id: "2", matricula: 125, nome: 'Bruno' }
-    ]);
+    const [objetos, setObjetos] = useState(null);
+    const navigate = useNavigate();
+
+    const carregarDados = () => {
+        axios.get('http://localhost:3005/alunos').then(resp => {
+            setObjetos(resp.data);
+        });
+    };
+
+    useEffect(() => {
+        carregarDados();
+    }, []);
+
+    const excluir = (e, id) => {
+        e.preventDefault();
+        axios.delete(`http://localhost:3005/alunos/${id}`).then(
+            resp => {
+                console.log(resp);
+                navigate(0);
+            }
+        );
+    };
 
     if (!objetos) {
         return <div>Carregando...</div>;
@@ -32,7 +51,7 @@ const AlunoListar = () => {
                                     <td>
                                         <Link to={`/alunos/consultar/${x.id}`} className="btn btn-secondary">Consultar</Link>
                                         <Link to={`/alunos/alterar/${x.id}`} className="btn btn-warning">Alterar</Link>
-                                        <button className="btn btn-danger">Excluir</button>
+                                        <button className="btn btn-danger" onClick={e => excluir(e, x.id)}>Excluir</button>
                                     </td>
                                 </tr>
                             );
