@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import api from "../../utils/api";
 
 const AlunoInserir = () => {
@@ -32,6 +31,9 @@ const AlunoInserir = () => {
 
     if (falha) {
         mensagemFalha = (<div className="alert alert-danger">{falha}</div>);
+        setTimeout(() => {
+            setFalha(null);
+        }, 10000);
     }
 
     return (

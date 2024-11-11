@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../utils/api";
 import Carregando from "../Carregando";
-import { formatarNumero } from "../../utils/formatar";
 
 const AlunoAlterar = () => {
     const [objeto, setObjeto] = useState(
@@ -17,7 +16,7 @@ const AlunoAlterar = () => {
         api.get(`atletas/${id}`, dado => {
             setObjeto(dado);
         }, setFalha);
-    }, []);
+    }, [id]);
 
     const atualizarCampo = (nome, valor) => {
         let objNovo = { ...objeto };
@@ -41,6 +40,9 @@ const AlunoAlterar = () => {
 
     if (falha) {
         mensagemFalha = (<div className="alert alert-danger">{falha}</div>);
+        setTimeout(() => {
+            setFalha(null);
+        }, 10000);
     }
 
     if (!objeto) {

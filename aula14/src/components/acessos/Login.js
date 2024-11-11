@@ -36,23 +36,28 @@ const Login = () => {
 
     if (falha) {
         mensagemFalha = (<div className="alert alert-danger">{falha}</div>);
+        setTimeout(() => {
+            setFalha(null);
+        }, 10000);
     }
 
     return (
-        <div className="d-flex justify-content-center">
+        <div className="">
             {mensagemFalha}
-            <form className="w-50 m-5">
-                <h3>Login</h3>
-                <div>
-                    <label className="form-label">E-mail</label>
-                    <input className="form-control" value={objeto.matricula} onChange={e => atualizarCampo('email', e.target.value)} type="email" />
-                </div>
-                <div>
-                    <label className="form-label">Senha</label>
-                    <input className="form-control" value={objeto.senha} onChange={e => atualizarCampo('senha', e.target.value)} type="password" />
-                </div>
-                <button className="btn btn-primary mt-2" onClick={e => login(e)}>Login</button>
-            </form>
+            <div className="d-flex justify-content-center">
+                <form className="w-50 m-5">
+                    <h3>Login</h3>
+                    <div>
+                        <label className="form-label">E-mail</label>
+                        <input className="form-control" value={objeto.matricula} onChange={e => atualizarCampo('email', e.target.value)} type="email" />
+                    </div>
+                    <div>
+                        <label className="form-label">Senha</label>
+                        <input className="form-control" value={objeto.senha} onChange={e => atualizarCampo('senha', e.target.value)} type="password" />
+                    </div>
+                    <button className="btn btn-primary mt-2" onClick={e => login(e)}>Login</button>
+                </form>
+            </div>
         </div>
     );
 };

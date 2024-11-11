@@ -15,7 +15,7 @@ const AlunoConsultar = () => {
         api.get(`atletas/${id}`, dado => {
             setObjeto(dado);
         }, setFalha);
-    }, []);
+    }, [id]);
 
     const voltar = e => {
         e.preventDefault();
@@ -26,6 +26,9 @@ const AlunoConsultar = () => {
 
     if (falha) {
         mensagemFalha = (<div className="alert alert-danger">{falha}</div>);
+        setTimeout(() => {
+            setFalha(null);
+        }, 10000);
     }
 
     if (!objeto) {
