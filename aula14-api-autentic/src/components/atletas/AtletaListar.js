@@ -21,12 +21,6 @@ const AlunoListar = () => {
     const excluir = (e, id) => {
         e.preventDefault();
         api.delete('atletas', id, _ => navigate(0), erro => setFalha(erro));
-        // axios.delete(`http://localhost:3005/atletas/${id}`).then(
-        //     resp => {
-        //         console.log(resp);
-        //         navigate(0);
-        //     }
-        // );
     };
 
     let mensagemFalha = null;

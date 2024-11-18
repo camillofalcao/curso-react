@@ -4,9 +4,7 @@ import api from "../../utils/api";
 import Carregando from "../Carregando";
 
 const AlunoAlterar = () => {
-    const [objeto, setObjeto] = useState(
-        { id: "2", matricula: 125, nome: 'Bruno' }
-    );
+    const [objeto, setObjeto] = useState(null);
     const [falha, setFalha] = useState(null);
     const navigate = useNavigate();
 
